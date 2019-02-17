@@ -21,11 +21,10 @@ func (d DiceRoll) getAmount() (dr DiceRoll) {
 	for i := range d.Amount {
 		rand.Seed(time.Now().UnixNano())
 		random := rand.Intn(d.Type)
-		d.Amount[i] = random
+		d.Amount[i] = random + 1
 		fmt.Println(d)
 		d.Total = d.Total + d.Amount[i]
 	}
-	dr = d
 	return d
 }
 
