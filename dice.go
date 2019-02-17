@@ -31,16 +31,10 @@ func (d DiceRoll) getAmount() (dr DiceRoll) {
 func main() {
 
 	s := strings.Split(os.Args[1], "d")
-	//	fmt.Println(s)
-	//	fmt.Println(s[0])
-	//	fmt.Println(s[1])
 
 	amt, _ := strconv.Atoi(s[0])
 	typ, _ := strconv.Atoi(s[1])
 	d := DiceRoll{Number: amt, Type: typ}
-	//d.Number = strconv.Atoi(s[1])
-	//	fmt.Println(d)
 	d = d.getAmount()
-	//	fmt.Println("vim-go")
 	fmt.Println(d.Total)
 }
