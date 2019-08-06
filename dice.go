@@ -31,7 +31,6 @@ func (d DiceRoll) getAmount() (dr DiceRoll) {
 func main() {
 
 	s := strings.Split(os.Args[1], "d")
-
 	amt, _ := strconv.Atoi(s[0])
 	typ, _ := strconv.Atoi(s[1])
 	d := DiceRoll{Number: amt, Type: typ}
